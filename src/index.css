@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Jua&family=Inter:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", sans-serif;
+  --font-jua: "Jua", sans-serif;
+}
+
+@layer base {
+  body {
+    @apply font-sans bg-[#F0F7FF] text-[#2D3436] antialiased;
+  }
+}
+
+.kid-card {
+  @apply bg-white border-4 border-[#4D96FF]/20 rounded-[2.5rem] shadow-[0_12px_40px_rgba(77,150,255,0.1)];
+}
+
+.kid-button-primary {
+  @apply bg-[#4D96FF] text-white rounded-2xl px-8 py-4 font-jua text-2xl shadow-lg shadow-[#4D96FF]/30 active:translate-y-[4px] active:shadow-none transition-all hover:bg-[#3B82F6] hover:-translate-y-[2px];
+}
+
+.kid-button-secondary {
+  @apply bg-[#FFD93D] text-[#2D3436] rounded-2xl px-6 py-3 font-jua text-xl shadow-md active:translate-y-[2px] transition-all hover:bg-[#FACC15];
+}
+
+.kid-input {
+  @apply bg-white border-4 border-[#4D96FF]/10 rounded-2xl px-6 py-4 focus:ring-4 focus:ring-[#4D96FF]/20 focus:border-[#4D96FF]/30 outline-none transition-all font-medium text-lg placeholder-[#A8A29E];
+}
+
+.markdown-body {
+  @apply font-sans leading-relaxed text-lg;
+}
+
+.markdown-body p {
+  @apply mb-4 last:mb-0;
+}
+
+.markdown-body strong {
+  @apply text-[#4D96FF] font-bold;
+}
+
+.markdown-body ul, .markdown-body ol {
+  @apply ml-6 mb-4 space-y-2;
+}
+
+.markdown-body li {
+  @apply list-disc marker:text-[#6BCB77];
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-[#4D96FF]/20 rounded-full border-4 border-transparent bg-clip-padding;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-[#4D96FF]/40;
+}
